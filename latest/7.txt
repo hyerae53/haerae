@@ -1,0 +1,215 @@
+23.12
+         </p>
+         <p>
+          <b>
+           주요 키워드
+          </b>
+          Python, Logistic Regression, Neural Network, Data Mining
+         </p>
+        </div>
+        <div class="detail-grid">
+         <div class="detail-card">
+          <h4>
+           What I did
+          </h4>
+          <ul>
+           <li>
+            서울시 행정동 단위의 11개 변수를 여러 출처에서 수집·결합하고, 행정동명 변경·중복·결측치 등 실제 공공데이터의 품질 문제를 정리함.
+           </li>
+           <li>
+            과거 기간을 학습, 이후 기간을 테스트로 분리해 Logistic Regression·Decision Tree·Random Forest·Neural Network를 같은 문제에서 비교함.
+           </li>
+           <li>
+            Logistic Regression과 Neural Network를 담당해 예측성능과 해석 가능성의 차이를 확인함.
+           </li>
+          </ul>
+         </div>
+         <div class="detail-card learned">
+          <h4>
+           What I learned
+          </h4>
+          <ul>
+           <li>
+            실제 데이터 분석에서는 모델 선택보다 서로 다른 출처의 기준을 맞추고 데이터 오류를 처리하는 작업이 큰 비중을 차지한다는 점을 배움.
+           </li>
+           <li>
+            복잡한 모델이 항상 더 나은 결과를 주는 것은 아니며, 활용 목적에 따라 성능과 해석 가능성 사이의 균형이 필요하다는 점을 확인함.
+           </li>
+           <li>
+            시계열적으로 떨어진 기간을 테스트에 사용하며 과거 패턴이 미래에도 유지되는지 검증하는 관점을 익힘.
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </details>
+     </article>
+    </div>
+   </div>
+  </section>
+  <section id="activities">
+   <div class="wrap">
+    <div class="section-head">
+     <h2>
+      Activities
+     </h2>
+    </div>
+    <div class="activity-list">
+     <article class="act">
+      <div class="date">
+       2025.09 – 2026.06
+      </div>
+      <h3>
+       Y-FoRM (Yonsei Forum of Risk Management)
+      </h3>
+      <p class="activity-meta">
+       <b>
+        (설명)
+       </b>
+       교내 금융공학 및 리스크관리 학회
+       <br/>
+       <b>
+        (역할)
+       </b>
+       부원, 학술부장
+      </p>
+      <details class="deep">
+       <summary>
+        전체 활동 보기
+       </summary>
+       <div class="deep-content">
+        <ul>
+         <li>
+          매주 FICC 시사스터디 리포트를 작성하며 금리, 환율, 외국인 수급과 시장 변화를 추적
+         </li>
+         <li>
+          국채선물 가격결정·베이시스 트레이딩, 채권선도 기반 보험사 ALM 등 금리파생상품 프로젝트 수행
+         </li>
+         <li>
+          보험·ETF·시장미시구조 프로젝트를 통해 수급, 가격, 리스크를 데이터로 연결
+         </li>
+         <li>
+          John C. Hull 「Options, Futures, and Other Derivatives (11th edition)」 기반 파생상품 이론과 VaR &amp; ES 학습
+         </li>
+        </ul>
+       </div>
+      </details>
+     </article>
+     <article class="act">
+      <div class="date">
+       2024.08 – 2025.06
+      </div>
+      <h3>
+       FBA Quant
+      </h3>
+      <p class="activity-meta">
+       <b>
+        (설명)
+       </b>
+       연합 퀀트 학회
+       <br/>
+       <b>
+        (역할)
+       </b>
+       학회원, 리크루팅 팀장
+      </p>
+      <details class="deep">
+       <summary>
+        전체 활동 보기
+       </summary>
+       <div class="deep-content">
+        <ul>
+         <li>
+          AP&amp;PO 세션에서 Fama-French 3-Factor, Black-Litterman, CPPI 등 자산가격결정과 포트폴리오 구성 방법을 학습, 구현
+         </li>
+         <li>
+          FE 세션에서 차익거래, Forward, Swap, 금리, 고정수익, 기간구조와 Monte Carlo Simulation을 학습
+         </li>
+         <li>
+          Udacity AI for Trading, Quantitative Equity Portfolio Management 교재 및 실습을 통해 정량 운용 방법론 학습
+         </li>
+         <li>
+          약 40명 지원자, 8명 면접관 리크루팅을 총괄하고 Google Spreadsheet로 지원자, 일정, 평가 결과를 통합 관리
+         </li>
+        </ul>
+       </div>
+      </details>
+     </article>
+     <article class="act">
+      <div class="date">
+       2024.01 – 2024.12
+      </div>
+      <h3>
+       YSAL (Yonsei Sport Data Analysis Lab)
+      </h3>
+      <p class="activity-meta">
+       <b>
+        (설명)
+       </b>
+       교내 스포츠 데이터 분석 학회
+       <br/>
+       <b>
+        (역할)
+       </b>
+       야구, 농구팀 부원
+      </p>
+      <details class="deep">
+       <summary>
+        전체 활동 보기
+       </summary>
+       <div class="deep-content">
+        <ul>
+         <li>
+          GMM, Ridge Regression, CNN 등 통계, 머신러닝 모델을 실제 스포츠 데이터 의사결정 문제에 적용
+         </li>
+         <li>
+          국내 프로농구팀 협업 프로젝트에서 선수 포지션 재분류와 라인업 분석 수행
+         </li>
+         <li>
+          Markov Chain, SVM, Decision Tree, CNN, RNN, GNN 등 머신러닝, 딥러닝 이론 학습
+         </li>
+        </ul>
+       </div>
+      </details>
+     </article>
+     <article class="act">
+      <div class="date">
+       2023.11 – 2024.11
+      </div>
+      <h3>
+       SVAN Cover Band
+      </h3>
+      <p class="activity-meta">
+       <b>
+        (설명)
+       </b>
+       과 밴드 소모임
+       <br/>
+       <b>
+        (역할)
+       </b>
+       부회장, 드럼 및 키보드 연주
+      </p>
+      <details class="deep">
+       <summary>
+        전체 활동 보기
+       </summary>
+       <div class="deep-content">
+        <ul>
+         <li>
+          부회장으로 공연 4회 및 MT 기획
+         </li>
+         <li>
+          약 30명 부원 스케줄 관리, 공연장 대관 및 총무 역할
+         </li>
+        </ul>
+       </div>
+      </details>
+     </article>
+    </div>
+   </div>
+  </section>
+  <footer>
+  </footer>
+ </body>
+</html>

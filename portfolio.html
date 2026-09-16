@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hyerae's Portfolio</title>
+  <meta name="description" content="조혜래 자산운용 포트폴리오" />
+  <style>
+    html,body{margin:0;min-height:100%;background:#f6f7f8;font-family:Arial,sans-serif}
+    #loading{min-height:100vh;display:grid;place-items:center;color:#777;font-size:14px}
+  </style>
+</head>
+<body>
+  <div id="loading">Portfolio loading...</div>
+  <script>
+    (async()=>{
+      try{
+        const parts=await Promise.all(Array.from({length:8},(_,i)=>fetch(`latest/${i}.txt`).then(r=>{if(!r.ok)throw new Error(`part ${i}`);return r.text()})));
+        const parser=new DOMParser();
+        const doc=parser.parseFromString(parts.join(''),'text/html');
+        doc.title="Hyerae's Portfolio";
+        doc.querySelectorAll('#other .detail-card.learned').forEach(el=>el.remove());
+        document.open();
+        document.write('<!DOCTYPE html>\n'+doc.documentElement.outerHTML);
+        document.close();
+      }catch(e){
+        document.getElementById('loading').textContent='포트폴리오를 불러오지 못했습니다.';
+        console.error(e);
+      }
+    })();
+  </script>
+</body>
+</html>

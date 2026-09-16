@@ -1,39 +1,29 @@
 <!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hyerae's Portfolio</title>
-  <meta name="description" content="조혜래 자산운용 포트폴리오" />
-  <style>
-    html,body{margin:0;min-height:100%;background:#f6f7f8;font-family:Arial,sans-serif}
-    #loading{min-height:100vh;display:grid;place-items:center;color:#777;font-size:14px}
-  </style>
-</head>
-<body>
-  <div id="loading">Portfolio loading...</div>
-  <script>
-    (async()=>{
-      try{
-        const res=await fetch('https://hyerae-asset-management-portfolio-8gzo8m.v2.appdeploy.ai/api/portfolio',{cache:'no-store'});
-        if(!res.ok) throw new Error('portfolio api');
-        const data=await res.json();
-        let html=data.html;
-        if(!html){
-          const parts=await Promise.all(Array.from({length:8},(_,i)=>fetch(`latest/${i}.txt`).then(r=>{if(!r.ok)throw new Error(`part ${i}`);return r.text()})));
-          html=parts.join('');
-        }
-        const doc=new DOMParser().parseFromString(html,'text/html');
-        doc.title="Hyerae's Portfolio";
-        doc.querySelectorAll('#other .detail-card.learned').forEach(el=>el.remove());
-        document.open();
-        document.write('<!DOCTYPE html>\n'+doc.documentElement.outerHTML);
-        document.close();
-      }catch(e){
-        document.getElementById('loading').textContent='포트폴리오를 불러오지 못했습니다.';
-        console.error(e);
-      }
-    })();
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hyerae's Portfolio</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <main id="viewerShell">
+        <iframe id="portfolioFrame" title="Hyerae's Portfolio"></iframe>
+        <div id="editorToolbar" class="editor-toolbar" hidden>
+          <div class="editor-status-wrap">
+            <strong>Portfolio Editor</strong
+            ><span id="editorStatus">편집 준비 중</span>
+          </div>
+          <button id="signInBtn" type="button">로그인</button
+          ><button id="toggleEditBtn" type="button">편집 시작</button
+          ><button id="publishBtn" type="button" class="primary">
+            변경사항 게시</button
+          ><button id="discardBtn" type="button">임시저장 삭제</button>
+        </div>
+        <div id="toast" class="toast" hidden></div>
+      </main>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
 </html>

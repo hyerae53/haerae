@@ -15,9 +15,15 @@
   <script>
     (async()=>{
       try{
-        const parts=await Promise.all(Array.from({length:8},(_,i)=>fetch(`latest/${i}.txt`).then(r=>{if(!r.ok)throw new Error(`part ${i}`);return r.text()})));
-        const parser=new DOMParser();
-        const doc=parser.parseFromString(parts.join(''),'text/html');
+        const res=await fetch('https://hyerae-asset-management-portfolio-8gzo8m.v2.appdeploy.ai/api/portfolio',{cache:'no-store'});
+        if(!res.ok) throw new Error('portfolio api');
+        const data=await res.json();
+        let html=data.html;
+        if(!html){
+          const parts=await Promise.all(Array.from({length:8},(_,i)=>fetch(`latest/${i}.txt`).then(r=>{if(!r.ok)throw new Error(`part ${i}`);return r.text()})));
+          html=parts.join('');
+        }
+        const doc=new DOMParser().parseFromString(html,'text/html');
         doc.title="Hyerae's Portfolio";
         doc.querySelectorAll('#other .detail-card.learned').forEach(el=>el.remove());
         document.open();
